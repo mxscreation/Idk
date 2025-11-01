@@ -10,7 +10,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^4.22.0",
+    "@tensorflow/tfjs": "^4.17.0",
     "@tensorflow/tfjs-node": "^4.17.0",
     "cannon-es": "^0.20.0",
     "cors": "^2.8.5",
