@@ -133,7 +133,7 @@ export class NeuralNetwork {
   /**
    * Convert sensory input to tensor
    */
-  private sensoryInputToTensor(sensoryInput: SensoryInput, emotionState: number[], memories: any[]): any {
+  private sensoryInputToTensor(sensoryInput: SensoryInput, emotionState: number[], memories: any[]): tf.Tensor {
     const inputArray: number[] = [];
 
     // Visual inputs (flatten)
