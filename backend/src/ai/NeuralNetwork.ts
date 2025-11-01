@@ -67,7 +67,7 @@ export class NeuralNetwork {
     this.model = tf.model({ inputs: input, outputs: output as any });
 
     // Create optimizer
-    this.optimizer = tf.train.adam(this.learningRate);
+    this.optimizer = (tf as any).train.adam(this.learningRate);
 
     this.isInitialized = true;
     logger.info('Neural network initialized with random weights');
