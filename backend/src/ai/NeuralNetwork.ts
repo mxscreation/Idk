@@ -85,7 +85,7 @@ export class NeuralNetwork {
     const inputTensor = this.sensoryInputToTensor(sensoryInput, emotionState, memories);
 
     // Forward pass
-    const outputTensor = this.model.predict(inputTensor) as any;
+    const outputTensor = this.model.predict(inputTensor) as tf.Tensor;
 
     // Store prediction for learning
     if (this.previousPrediction) {
