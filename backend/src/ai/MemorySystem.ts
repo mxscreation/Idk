@@ -176,7 +176,7 @@ export class MemorySystem {
     return {
       episodicMemories: Array.from(this.episodicMemories.values()),
       semanticMemories: Array.from(this.semanticMemories.values()),
-      vocabulary: Array.from(this.vocabulary.entries()).map(([word, entry]) => ({ word, ...entry })),
+      vocabulary: Array.from(this.vocabulary.values()),
     };
   }
 
