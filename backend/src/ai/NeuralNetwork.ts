@@ -1,4 +1,5 @@
-import * as tf from '@tensorflow/tfjs-node';
+import '@tensorflow/tfjs-node'; // Load Node.js backend
+import * as tf from '@tensorflow/tfjs';
 import { CONFIG } from '../config/constants';
 import { logger } from '../utils/logger';
 import type { SensoryInput, NeuralOutput, Vector3 } from '../types';
@@ -6,8 +7,8 @@ import type { SensoryInput, NeuralOutput, Vector3 } from '../types';
 export class NeuralNetwork {
   private model: tf.LayersModel | null = null;
   private learningRate: number = CONFIG.NEURAL_LEARNING_RATE;
-  private optimizer: any = null; // tf.train.Optimizer type
-  private previousPrediction: any = null; // tf.Tensor type
+  private optimizer: tf.Optimizer | null = null;
+  private previousPrediction: tf.Tensor | null = null;
   private isInitialized: boolean = false;
 
   /**
