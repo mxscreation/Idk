@@ -5,7 +5,7 @@ import { logger } from '../utils/logger';
 import type { SensoryInput, NeuralOutput, Vector3 } from '../types';
 
 export class NeuralNetwork {
-  private model: tf.LayersModel | null = null;
+  private model: any | null = null;
   private learningRate: number = CONFIG.NEURAL_LEARNING_RATE;
   private optimizer: any = null;
   private previousPrediction: any = null;
