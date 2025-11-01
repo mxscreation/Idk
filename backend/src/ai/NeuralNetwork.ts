@@ -180,7 +180,7 @@ export class NeuralNetwork {
     }
     const finalInput = inputArray.slice(0, CONFIG.NEURAL.INPUT_SIZE);
 
-    return tf.tensor2d([finalInput]);
+    return (tf as any).tensor2d([finalInput]);
   }
 
   /**
