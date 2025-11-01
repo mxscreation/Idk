@@ -7,8 +7,8 @@ import type { SensoryInput, NeuralOutput, Vector3 } from '../types';
 export class NeuralNetwork {
   private model: tf.LayersModel | null = null;
   private learningRate: number = CONFIG.NEURAL_LEARNING_RATE;
-  private optimizer: tf.Optimizer | null = null;
-  private previousPrediction: tf.Tensor | null = null;
+  private optimizer: any = null;
+  private previousPrediction: any = null;
   private isInitialized: boolean = false;
 
   /**
@@ -64,7 +64,7 @@ export class NeuralNetwork {
       })
       .apply(x);
 
-    this.model = tf.model({ inputs: input, outputs: output as tf.SymbolicTensor });
+    this.model = tf.model({ inputs: input, outputs: output as any });
 
     // Create optimizer
     this.optimizer = tf.train.adam(this.learningRate);
