@@ -186,7 +186,7 @@ export class NeuralNetwork {
   /**
    * Convert tensor output to NeuralOutput structure
    */
-  private tensorToNeuralOutput(outputTensor: tf.Tensor): NeuralOutput {
+  private tensorToNeuralOutput(outputTensor: any): NeuralOutput {
     const outputArray = Array.from(outputTensor.dataSync()) as number[];
 
     // Parse output tensor into structured format
